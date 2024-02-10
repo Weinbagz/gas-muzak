@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'DigitalMeter';
+    src: url('/public/fonts/DSEG7Modern-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.gas-tracker .image-container {
+    position: relative;
+    width: 90vw; /* Adjust the width as a percentage of the viewport width */
+    height: 90vw; /* Height equal to width to maintain square aspect ratio */
+    max-width: 100%; /* Limit the width to not exceed the viewport width */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Ensures no content spills out */
+}
+
+.gas-tracker .responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+.gas-tracker .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0); /* Semi-transparent background */
+}
+
+.gas-tracker .overlay h2 {
+    color: #02e1e8; /* Base color for the text */
+    font-family: 'DigitalMeter', 'Arial', sans-serif; /* Use DigitalMeter with Arial as a fallback */
+    font-size: 5vw; /* Responsive font size, adjust as needed */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 
+        0 0 15px #f708f7, /* Pink glow with an even larger blur */
+        0 0 30px #02e1e8, /* Cyan glow with a larger blur */
+        0 0 50px #02e1e8; /* Cyan glow with the largest blur */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the text */
+    padding: 0.5em 1em; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners for the background */
+    mix-blend-mode: screen; /* Blend mode for a glowing effect */
+    position: absolute;
+    top: 43%;
+    left: 49.5%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 4vw; /* Responsive font size */
+    /* Additional text styling */
+}
+
+
+.gas-tracker .overlay button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Additional button styling */
+}

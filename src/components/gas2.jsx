@@ -23,7 +23,7 @@ const GasTracker = () => {
       const safeGas = parseInt(data.result.SafeGasPrice);
       console.log(safeGas);
       setGasAmount(safeGas);
-      determineTrackAndImage(300);
+      determineTrackAndImage(safeGas);
     } catch (error) {
       console.error("Error fetching gas amount:", error);
     }

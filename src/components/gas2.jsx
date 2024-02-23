@@ -22,6 +22,9 @@ const GasTracker = () => {
       const data = await response.json();
       const safeGas = parseInt(data.result.SafeGasPrice);
       console.log(safeGas);
+      if (Number.isNaN(safeGas)) {
+        return;
+      }
       setGasAmount(safeGas);
       determineTrackAndImage(safeGas);
     } catch (error) {
